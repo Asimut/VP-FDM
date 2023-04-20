@@ -1,0 +1,41 @@
+{
+    "background_color": "#ffffff",
+    "description": "INGREZZA is contraindicated in patients with a history of hypersensitivity to valbenazine or any components of INGREZZA",
+    "dir": "ltr",
+    "display": "standalone",
+    "name": "Considerations for the Treatment of TD",
+    "orientation": "any", 
+    "short_name": "VP FDM",
+    "start_url": "https://asimut.github.io/VP-FDM/",
+    "theme_color": "#ffffff",
+    "categories": [
+      "education"
+    ],
+    "icons":[
+      {
+        "src": "android-launchericon-512-512.png",
+        "sizes": "512x512",
+        "purpose": "maskable"
+      },
+      {
+        "src": "152.png",
+        "sizes": "152x152",
+        "purpose": "any" 
+      },
+      {
+        "src": "144.png",
+        "sizes": "144x144"
+      },
+      {
+        "src": "64.png",
+        "sizes": "64x64"
+      },
+      {
+        "src": "32.png",
+        "sizes": "32x32"
+      }
+    ],
+    "shortcuts": [],
+    "lang": "en",
+    "display_override": []
+  }

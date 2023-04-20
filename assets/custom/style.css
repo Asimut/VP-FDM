@@ -1,0 +1,910 @@
+/*
+ * New Styles
+ */
+
+ @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&display=swap');
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(255 255 255 / 80%);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.wrapper {
+    width: 200px;
+    text-align: center;
+    padding: 30px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 20%);
+}
+.loader svg {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+}
+.loader .title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+
+ .nav-sidebar-header__graphic,
+ .classic .cover__header-content {
+     background: transparent -webkit-gradient(linear,left top, right top,from(#d50054),to(#ff6b00)) 0 0 no-repeat;
+     background: transparent -o-linear-gradient(left,#d50054,#ff6b00) 0 0 no-repeat;
+     background: transparent linear-gradient(90deg,#d50054,#ff6b00) 0 0 no-repeat;
+ }
+ .sidebar-sublist-0 .nav-sidebar-header__graphic {
+     background: #595478;
+ }
+ .cover__header {
+     position: relative;
+     /* padding-bottom: 50px;
+     background: transparent -webkit-gradient(linear,left top, right top,from(#43588d),to(#20223e)) 0 0 no-repeat;
+     background: transparent -o-linear-gradient(left,#43588d,#20223e) 0 0 no-repeat;
+     background: transparent linear-gradient(90deg,#43588d,#20223e) 0 0 no-repeat;
+  */
+    }
+ .cover__header-content-title{
+     position: relative;
+ }
+ @media(min-width:800px){
+     .cover__header-content-title::before {
+         content: '';
+         background-image: url(cover_logo.png);
+         width: 552px;
+         height: 551px;
+         position: absolute;
+         right: 100%;
+         top: 75%;
+         -webkit-transform: translateY(-50%);
+             -ms-transform: translateY(-50%);
+                 transform: translateY(-50%);
+     }
+ }
+ @media (min-width: 48em){
+     .classic .cover__header-content {
+         min-height: 40rem;
+         padding: 4.4rem 5rem 5.4rem;
+     }
+ }
+ 
+ /*
+  * Sidebar %Complete 
+  */
+ .nav-sidebar-header__progress-track, 
+ .nav-sidebar-header__progress-text {
+     display: none;
+ }
+ .lesson-progress__tooltip.lesson-progress__tooltip--sidebar {
+     display: none!important;
+ }
+ .classic .nav-sidebar-header__inner:not(.nav-sidebar-header__inner--compact) {
+     padding-bottom: 4rem;    
+ }
+ .nav-sidebar__outline-item:first-child .nav-sidebar__outline-section-item--active:after{
+     border-color: #595478;
+ }
+ .nav-sidebar__outline-item:first-child .progress-circle {
+     color: #595478!important;
+ }
+ .nav-sidebar__outline-item:first-child .progress-circle__runner{
+    stroke: #595478!important;
+ }
+ .nav-sidebar__outline-item:first-child  .progress-circle__runner--done{
+    fill: #595478!important;
+ }
+
+ /* .nav-sidebar__body{
+     position: relative;
+ }
+ .nav-sidebar__body::before{
+     content: '';
+     display: block;
+     height: 30px;
+     background: transparent linear-gradient(90deg,#43588d,#20223e) 0 0 no-repeat;
+ } */
+ 
+ .lesson-nav--previous .lesson-nav__link-text[name] {
+     font-size: 0;
+ }
+ .lesson-nav--previous .lesson-nav__link-text[name]::before {
+     content: attr(name);
+     font-size: 15px;
+ }
+ 
+ 
+ /*
+  * Progress
+  */
+ .progress {
+     visibility: hidden;
+ }
+ .progress-bar {
+     display: none;
+ }
+ 
+ 
+ /*
+  * Animations
+  */
+ .continue-btn{
+     padding-top: 30px;
+     padding-bottom: 30px;
+     -webkit-transition: all ease-in-out 300ms;
+     -o-transition: all ease-in-out 300ms;
+     transition: all ease-in-out 300ms;
+ }
+ .continue-btn:hover {
+     opacity: .8;
+ }
+ 
+ /*
+  * Accordion icon
+ */
+ .blocks-accordion__header {
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-align: center;
+         -ms-flex-align: center;
+             align-items: center;
+ }
+ .blocks-accordion__title .blocks-accordion__icon {
+     font-size: 0;
+ }
+ .blocks-accordion__title .blocks-accordion__icon:before {
+     content: '';
+     display: block;
+     width: 40px;
+     height: 37px;
+     background-image: url(chat.svg);
+     background-size: contain;
+     background-repeat: no-repeat;
+     background-position: center;
+ }
+ .custom-accordion .blocks-accordion__item {
+     border-top-color: #A6BBC3;
+ }
+ .custom-accordion .block-card.bg--light, 
+ .custom-accordion .blocks-accordion__wrapper {
+     -webkit-box-shadow: none;
+             box-shadow: none;
+     border-left-color: transparent;
+     border-right-color: transparent;
+     border-bottom-color: #A6BBC3;
+ }
+ .custom-accordion + .custom-accordion .blocks-accordion__item:first-child {
+     border-top: none;
+ }
+ .custom-accordion .blocks-accordion__toggler {
+     font-size: 0;
+     position: relative;
+ }
+ .custom-accordion .blocks-accordion__toggler::before {
+     content: '';
+     background-image: url(arrow_down.png);
+     display: block;
+     width: 51px;
+     height: 51px;
+     position: absolute;
+     right: 0;
+     top: 50%;
+     -webkit-transform: translateY(-50%) rotate(180deg);
+         -ms-transform: translateY(-50%) rotate(180deg);
+             transform: translateY(-50%) rotate(180deg);
+ }
+ .custom-accordion .blocks-accordion__item--closed .blocks-accordion__toggler::before{
+     -webkit-transform: translateY(-50%);
+         -ms-transform: translateY(-50%);
+             transform: translateY(-50%);
+ }
+ @media(max-width:760px){
+     .custom-accordion .blocks-accordion__header {
+         padding: 15px 20px;
+     }
+     .custom-accordion .blocks-accordion__toggler::before {
+         width: 40px;
+         height: 40px;
+         background-size: contain;
+         background-repeat: no-repeat;
+         background-position: center;
+     }
+ }
+ 
+ 
+ /* * * * * * * * * * * * * * * 
+  * Recolor Unbranded sections 
+  * * * * * * * * * * * * * * */
+ /* 
+     1. Serious Mental Illness (SMI) and its treatment
+     lesson-id: "MCiY5OjN5PR4fD1-0hMKoLOvTiDIhEks"
+ */
+ [data-lesson-id="MCiY5OjN5PR4fD1-0hMKoLOvTiDIhEks"] .lesson-header__top-wrap {
+     color: #595478;
+ }
+ [data-lesson-id="MCiY5OjN5PR4fD1-0hMKoLOvTiDIhEks"] .lesson-header__top-wrap:after{
+    background-color: #595478!important;
+ }
+ [data-lesson-id="MCiY5OjN5PR4fD1-0hMKoLOvTiDIhEks"] .brand--color {
+     color: #595478!important;
+ }
+ [data-lesson-id="MCiY5OjN5PR4fD1-0hMKoLOvTiDIhEks"] .brand--beforeBackground:before,
+ [data-lesson-id="MCiY5OjN5PR4fD1-0hMKoLOvTiDIhEks"] .brand--background {
+     background-color: #595478 !important;
+ }
+ [data-lesson-id="MCiY5OjN5PR4fD1-0hMKoLOvTiDIhEks"] .brand--border{
+     border-color: #595478 !important;
+ }
+ 
+ /* 
+     2. TD and antipsychotics
+     lesson-id: "bHGMNpQId2jWohVEymJQK-dCD329VJ9v"
+ */
+ [data-lesson-id="bHGMNpQId2jWohVEymJQK-dCD329VJ9v"] .lesson-header__top-wrap {
+     color: #595478;
+ }
+ [data-lesson-id="bHGMNpQId2jWohVEymJQK-dCD329VJ9v"] .lesson-header__top-wrap:after{
+    background-color: #595478!important;
+ }
+ [data-lesson-id="bHGMNpQId2jWohVEymJQK-dCD329VJ9v"] .brand--color {
+     color: #595478!important;
+ }
+ [data-lesson-id="bHGMNpQId2jWohVEymJQK-dCD329VJ9v"] .brand--beforeBackground:before,
+ [data-lesson-id="bHGMNpQId2jWohVEymJQK-dCD329VJ9v"] .brand--background {
+     background-color: #595478 !important;
+ }
+ [data-lesson-id="bHGMNpQId2jWohVEymJQK-dCD329VJ9v"] .brand--border{
+     border-color: #595478 !important;
+ }
+ 
+ /* 
+     3. Clinical presentation
+     lesson-id: "cbC5O12oDTs1VD6FZ6B9BVkIY0P5IZvK"
+ */
+ [data-lesson-id="cbC5O12oDTs1VD6FZ6B9BVkIY0P5IZvK"] .lesson-header__top-wrap {
+     color: #595478;
+ }
+ [data-lesson-id="cbC5O12oDTs1VD6FZ6B9BVkIY0P5IZvK"] .lesson-header__top-wrap:after{
+    background-color: #595478!important;
+ }
+ [data-lesson-id="cbC5O12oDTs1VD6FZ6B9BVkIY0P5IZvK"] .brand--color {
+     color: #595478!important;
+ }
+ [data-lesson-id="cbC5O12oDTs1VD6FZ6B9BVkIY0P5IZvK"] .brand--beforeBackground:before,
+ [data-lesson-id="cbC5O12oDTs1VD6FZ6B9BVkIY0P5IZvK"] .brand--background {
+     background-color: #595478 !important;
+ }
+ [data-lesson-id="cbC5O12oDTs1VD6FZ6B9BVkIY0P5IZvK"] .brand--border{
+     border-color: #595478 !important;
+ }
+ 
+ /* 
+     4. Differential diagnosis
+     lesson-id: "qj_DwPBRn4_VgsIP_uSx8BCOyWYCwchu"
+ */
+ [data-lesson-id="qj_DwPBRn4_VgsIP_uSx8BCOyWYCwchu"] .lesson-header__top-wrap {
+     color: #595478;
+ }
+ [data-lesson-id="qj_DwPBRn4_VgsIP_uSx8BCOyWYCwchu"] .lesson-header__top-wrap:after{
+    background-color: #595478!important;
+ }
+ [data-lesson-id="qj_DwPBRn4_VgsIP_uSx8BCOyWYCwchu"] .brand--color {
+     color: #595478!important;
+ }
+ [data-lesson-id="qj_DwPBRn4_VgsIP_uSx8BCOyWYCwchu"] .brand--beforeBackground:before,
+ [data-lesson-id="qj_DwPBRn4_VgsIP_uSx8BCOyWYCwchu"] .brand--background {
+     background-color: #595478 !important;
+ }
+ [data-lesson-id="qj_DwPBRn4_VgsIP_uSx8BCOyWYCwchu"] .brand--border{
+     border-color: #595478 !important;
+ }
+ 
+ /* 
+     5. Prevalence and incidence
+     lesson-id: "qbK0ZuaiTxvHlmYCZRLs2xz21k4YwLmx"
+ */
+ [data-lesson-id="qbK0ZuaiTxvHlmYCZRLs2xz21k4YwLmx"] .lesson-header__top-wrap {
+     color: #595478;
+ }
+ [data-lesson-id="qbK0ZuaiTxvHlmYCZRLs2xz21k4YwLmx"] .lesson-header__top-wrap:after{
+    background-color: #595478!important;
+ }
+ [data-lesson-id="qbK0ZuaiTxvHlmYCZRLs2xz21k4YwLmx"] .brand--color {
+     color: #595478!important;
+ }
+ [data-lesson-id="qbK0ZuaiTxvHlmYCZRLs2xz21k4YwLmx"] .brand--beforeBackground:before,
+ [data-lesson-id="qbK0ZuaiTxvHlmYCZRLs2xz21k4YwLmx"] .brand--background {
+     background-color: #595478 !important;
+ }
+ [data-lesson-id="qbK0ZuaiTxvHlmYCZRLs2xz21k4YwLmx"] .brand--border{
+     border-color: #595478 !important;
+ }
+ 
+ /* 
+     6. Economic burden of SMI and TD
+     lesson-id: "irObUVhO82y76-IGC6T6SteJcn0LN5Sa"
+ */
+ [data-lesson-id="irObUVhO82y76-IGC6T6SteJcn0LN5Sa"] .lesson-header__top-wrap {
+     color: #595478;
+ }
+ [data-lesson-id="irObUVhO82y76-IGC6T6SteJcn0LN5Sa"] .lesson-header__top-wrap:after{
+    background-color: #595478!important;
+ }
+ [data-lesson-id="irObUVhO82y76-IGC6T6SteJcn0LN5Sa"] .brand--color {
+     color: #595478!important;
+ }
+ [data-lesson-id="irObUVhO82y76-IGC6T6SteJcn0LN5Sa"] .brand--beforeBackground:before,
+ [data-lesson-id="irObUVhO82y76-IGC6T6SteJcn0LN5Sa"] .brand--background {
+     background-color: #595478 !important;
+ }
+ [data-lesson-id="irObUVhO82y76-IGC6T6SteJcn0LN5Sa"] .brand--border{
+     border-color: #595478 !important;
+ }
+ 
+ /* 
+     7. Quality measures
+     lesson-id: "6GKEO1HFB4t_vcVPUZ6BF55ONPJmymwy"
+ */
+ [data-lesson-id="6GKEO1HFB4t_vcVPUZ6BF55ONPJmymwy"] .lesson-header__top-wrap {
+     color: #595478;
+ }
+ [data-lesson-id="6GKEO1HFB4t_vcVPUZ6BF55ONPJmymwy"] .lesson-header__top-wrap:after{
+    background-color: #595478!important;
+ }
+ [data-lesson-id="6GKEO1HFB4t_vcVPUZ6BF55ONPJmymwy"] .brand--color {
+     color: #595478!important;
+ }
+ [data-lesson-id="6GKEO1HFB4t_vcVPUZ6BF55ONPJmymwy"] .brand--beforeBackground:before,
+ [data-lesson-id="6GKEO1HFB4t_vcVPUZ6BF55ONPJmymwy"] .brand--background {
+     background-color: #595478 !important;
+ }
+ [data-lesson-id="6GKEO1HFB4t_vcVPUZ6BF55ONPJmymwy"] .brand--border{
+     border-color: #595478 !important;
+ }
+ 
+ /* 
+     8. Clinical guidelines and recommendations for TD management
+     lesson-id: "_mC5FgDfkm1I4yrIXFOMPsA5aXmuEG8a"
+ */
+ [data-lesson-id="_mC5FgDfkm1I4yrIXFOMPsA5aXmuEG8a"] .lesson-header__top-wrap {
+     color: #595478;
+ }
+ [data-lesson-id="_mC5FgDfkm1I4yrIXFOMPsA5aXmuEG8a"] .lesson-header__top-wrap:after{
+    background-color: #595478!important;
+ }
+ [data-lesson-id="_mC5FgDfkm1I4yrIXFOMPsA5aXmuEG8a"] .brand--color {
+     color: #595478!important;
+ }
+ [data-lesson-id="_mC5FgDfkm1I4yrIXFOMPsA5aXmuEG8a"] .brand--beforeBackground:before,
+ [data-lesson-id="_mC5FgDfkm1I4yrIXFOMPsA5aXmuEG8a"] .brand--background {
+     background-color: #595478 !important;
+ }
+ [data-lesson-id="_mC5FgDfkm1I4yrIXFOMPsA5aXmuEG8a"] .brand--border{
+     border-color: #595478 !important;
+ }
+ 
+ /* 
+     9. Guidance for managing TD
+     lesson-id: "0DqvqhKttFmp_INRnQRwIZ2iixyPpo6M"
+ */
+ [data-lesson-id="0DqvqhKttFmp_INRnQRwIZ2iixyPpo6M"] .lesson-header__top-wrap {
+     color: #595478;
+ }
+ [data-lesson-id="0DqvqhKttFmp_INRnQRwIZ2iixyPpo6M"] .lesson-header__top-wrap:after{
+    background-color: #595478!important;
+ }
+ [data-lesson-id="0DqvqhKttFmp_INRnQRwIZ2iixyPpo6M"] .brand--color {
+     color: #595478!important;
+ }
+ [data-lesson-id="0DqvqhKttFmp_INRnQRwIZ2iixyPpo6M"] .brand--beforeBackground:before,
+ [data-lesson-id="0DqvqhKttFmp_INRnQRwIZ2iixyPpo6M"] .brand--background {
+     background-color: #595478 !important;
+ }
+ [data-lesson-id="0DqvqhKttFmp_INRnQRwIZ2iixyPpo6M"] .brand--border{
+     border-color: #595478 !important;
+ }
+ 
+ /* 
+     10. Clinician perspectives on VMAT2 inhibitors
+     lesson-id: "IKI9iv79O2Ipiz7YPP9fBXbJjX_ygPGw"
+ */
+ [data-lesson-id="IKI9iv79O2Ipiz7YPP9fBXbJjX_ygPGw"] .lesson-header__top-wrap {
+     color: #595478;
+ }
+ [data-lesson-id="IKI9iv79O2Ipiz7YPP9fBXbJjX_ygPGw"] .lesson-header__top-wrap:after{
+    background-color: #595478!important;
+ }
+ [data-lesson-id="IKI9iv79O2Ipiz7YPP9fBXbJjX_ygPGw"] .brand--color {
+     color: #595478!important;
+ }
+ [data-lesson-id="IKI9iv79O2Ipiz7YPP9fBXbJjX_ygPGw"] .brand--beforeBackground:before,
+ [data-lesson-id="IKI9iv79O2Ipiz7YPP9fBXbJjX_ygPGw"] .brand--background {
+     background-color: #595478 !important;
+ }
+ [data-lesson-id="IKI9iv79O2Ipiz7YPP9fBXbJjX_ygPGw"] .brand--border{
+     border-color: #595478 !important;
+ }
+ [data-block-id="cl4xe07w600dm3b6xh0u09p0f"] .blocks-tabs__image .img {
+    margin-bottom: 0;
+ }
+ [data-block-id="cl4xe07w600dm3b6xh0u09p0f"] .blocks-tabs__image .img:after {
+    content: 'Results based on a survey. No validated scale was used.';
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+ }
+ 
+ /* 
+     11. Overview
+     lesson-id: "cxym3v_N5o8XpfxT0nSjdfja74qrXvWz"
+ */
+ [data-block-id="cl656kj9o003q3b6q2q3q71la"] .block-impact {
+     background: transparent -webkit-gradient(linear,left top, right top,from(#d50054),to(#ff6b00)) 0 0 no-repeat;
+     background: transparent -o-linear-gradient(left,#d50054,#ff6b00) 0 0 no-repeat;
+     background: transparent linear-gradient(90deg,#d50054,#ff6b00) 0 0 no-repeat;
+ }
+ /* 
+     16. Dosing and administration
+     lesson-id: "eH85Al7ODWiuFijl04uvreVxgw8B5CJA"
+ */
+ [data-block-id="cl50cl089001w3b6q09xu6noi"] .block-impact {
+     background: transparent -webkit-gradient(linear,left top, right top,from(#d50054),to(#ff6b00)) 0 0 no-repeat;
+     background: transparent -o-linear-gradient(left,#d50054,#ff6b00) 0 0 no-repeat;
+     background: transparent linear-gradient(90deg,#d50054,#ff6b00) 0 0 no-repeat;
+ } 
+ /* 
+     17. Cost effectiveness analysis
+     lesson-id: "RCfF3xQuo0FKWqZvZ11urjt8FSvgQCvA"
+ */
+ [data-block-id="cl50dwjfr00543b6qsumodi7t"] .block-impact {
+    background: transparent -webkit-gradient(linear,left top, right top,from(#d50054),to(#ff6b00)) 0 0 no-repeat;
+    background: transparent -o-linear-gradient(left,#d50054,#ff6b00) 0 0 no-repeat;
+    background: transparent linear-gradient(90deg,#d50054,#ff6b00) 0 0 no-repeat;
+} 
+ /* 
+     18. Comparative effectiveness
+     lesson-id: "ax83vC0eTs2T7xk_z3U9ln6A6GC7Kvtl"
+ */
+ [data-block-id="cl6f4ftm000403b6qotqro6xk"] .block-impact {
+    background: transparent -webkit-gradient(linear,left top, right top,from(#d50054),to(#ff6b00)) 0 0 no-repeat;
+    background: transparent -o-linear-gradient(left,#d50054,#ff6b00) 0 0 no-repeat;
+    background: transparent linear-gradient(90deg,#d50054,#ff6b00) 0 0 no-repeat;
+} 
+ /* 
+     20.Ordering and supply
+     lesson-id: "ptErSum--hfdW6UXSDnTKXkEMYZpRXY4"
+ */
+ [data-block-id="cl63uuvnn001r3b6rd01132vv"] .block-impact {
+     background: transparent -webkit-gradient(linear,left top, right top,from(#d50054),to(#ff6b00)) 0 0 no-repeat;
+     background: transparent -o-linear-gradient(left,#d50054,#ff6b00) 0 0 no-repeat;
+     background: transparent linear-gradient(90deg,#d50054,#ff6b00) 0 0 no-repeat;
+ }
+
+  /* 
+     21.Efficacy by age group
+     lesson-id: "0OIy0LyXmpv-6ceEKlsR9LnAqe-i8Hho"
+ */
+ [data-block-id="cl2dphyyi000y3g6jkgxi9pk9"] .blocks-tabs__content-item[id$="-1"] .blocks-tabs__image .img {
+    margin-bottom: 0;
+ }
+ [data-lesson-id="0OIy0LyXmpv-6ceEKlsR9LnAqe-i8Hho"] [data-block-id="cl2dphyyi000y3g6jkgxi9pk9"] .blocks-tabs__content-item[id$="-0"] .blocks-tabs__image .img:after {
+    content: 'Post hoc analysis of outcomes are shown here at Week 6 in the pooled DBPC population (central-rater scoring only) and at Weeks 48 and 52 in the pooled long-term population (central-rater scoring for KINECT 3 and site-rater scoring for KINECT 4), based on observed cases. Least squares mean presented for Week 6; means presented for Weeks 48 and 52.';
+    display: block;
+    font-size: 12px;
+    margin-top: 10px;
+    font-weight: 400;
+ }
+ [data-lesson-id="0OIy0LyXmpv-6ceEKlsR9LnAqe-i8Hho"] [data-block-id="cl2dphyyi000y3g6jkgxi9pk9"] .blocks-tabs__content-item[id$="-1"] .blocks-tabs__image .img:after {
+    content: 'Outcomes analyzed at Week 6 in the pooled DBPC population (central-rater scoring only) and at Weeks 48 and 52 in the pooled long-term population (central-rater scoring for KINECT 3 and site-rater scoring for KINECT 4), based on observed cases. Least squares mean presented for Week 6; means presented for Weeks 48 and 52.';
+    display: block;
+    font-size: 12px;
+    margin-top: 10px;
+    font-weight: 400;
+ }
+
+ [data-block-id="cl6f4ftm000403b6qotqro6xk"] .fr-view ul {
+    color: #fff;
+    line-height: 1;
+ }
+
+
+/* * * * * * * * * * * * * * * 
+ * Floating Modal 
+ * * * * * * * * * * * * * * */
+.block-impact--note-floatingmodal .block-impact__container {
+    position: fixed;
+    top: 290px;
+    right: 30px;
+    background: #fff;
+    z-index: 999999;
+    padding: 0;
+    max-width: 300px;
+    -webkit-box-shadow: 0 0 10px #00000036;
+            box-shadow: 0 0 10px #00000036;
+    height: 50%;
+    max-height: 600px;
+    overflow: hidden;
+    border: 2px solid #d50054;
+    -webkit-transition: all ease-in-out 300ms;
+    -o-transition: all ease-in-out 300ms;
+    transition: all ease-in-out 300ms;
+    margin: 0;
+}
+.floating-modal {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5;
+    position: relative;
+    height: 100%;
+}
+.floating-modal__title {
+    background: #f6f7f7;
+    color: #9e1c64;
+    padding: 5px 10px;
+    font-size: 15px;
+    text-align: center;
+    /* white-space: nowrap; */
+}
+.floating-modal__prompt {
+    position: absolute;
+    bottom: 40px;
+    left: 10px;
+    right: 10px;
+    top: 40px;
+    overflow-y: auto;
+}
+.floating-modal__prompt a {
+    color: #d50054;
+}
+.floating-modal__prompt sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+.floating-modal__prompt p {
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+.floating-modal__prompt p:first-child {
+    line-height: 0;
+}
+.floating-modal__prompt>p>s{
+    font-size: 0;
+}
+.floating-modal__prompt>p>s::before {
+    content: '';
+    background-image: url(logo-modal.png);
+    width: 95%;
+    height: 28px;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+.floating-modal__prompt strong {
+    font-weight: bold;
+}
+.floating-modal__link {
+    font-size: 0;
+    position: absolute;
+    bottom: 0;
+    background: #d50054;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    padding: 5px;
+}
+.floating-modal__link a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.floating-modal__link a:hover{
+    text-decoration: underline;
+}
+
+
+/* scrollbar */
+.block-impact--note-floatingmodal .floating-modal__prompt::-webkit-scrollbar {
+    width: 10px;
+} 
+.block-impact--note-floatingmodal .floating-modal__prompt::-webkit-scrollbar-track {
+    background-color: #f6f7f7;
+    border-radius: 4px;
+} 
+.block-impact--note-floatingmodal .floating-modal__prompt::-webkit-scrollbar-thumb {
+    background-color: #000;
+    border-radius: 4px;
+}
+
+/* .block-impact--note-floatingmodal .block-impact__container {
+    position: fixed;
+     top: 290px;
+     right: 100px;
+     background: #fff;
+     z-index: 999999;
+     padding: 0;
+     width: 300px;
+     max-height: 50%;
+     transition: all ease-in-out 300ms;
+} */
+/* .block-impact--note-floatingmodal .block-impact__container {
+    width: 90%;
+    max-width: 950px;
+    bottom: 0;
+    top: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    height: 310px;
+} */
+
+@media(min-width: 1525px){
+    .block-impact--note-floatingmodal .block-impact__container {
+    width: 350px;
+  }
+
+  .lesson--open .block-impact--note-floatingmodal .block-impact__container {
+    width: 300px;
+  }
+}
+@media (min-width:1401px) and (max-width:1524px){
+    .floating-modal__title span {
+        max-width: 150px;
+        display: block;
+        margin: 0 auto;
+    }
+    .floating-modal__prompt{
+        top: 60px;
+    }
+}
+@media (min-width:1401px) and (max-width:1440px){
+    .course-navigation__sidebar--nav-open .floating-modal__title span {
+        /* max-width: 135px; */
+        font-size: 14px;
+    }
+    .course-navigation__sidebar--nav-open .floating-modal__prompt{
+        top: 70px;
+    }
+}
+/* @media(max-width: 1400px){
+    .block-impact--note-floatingmodal .block-impact__container {
+        width: 760px;
+        max-width: 90%;
+        bottom: 0;
+        top: auto;
+        left: 49%!important;
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+        height: 70px;
+    }
+    .blocks-lesson.has-modal {
+        padding-bottom: 70px;
+    }
+    .floating-modal__title{
+        background-repeat: no-repeat;
+        background-position: center right 10px;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0xMiAwYzYuNjIzIDAgMTIgNS4zNzcgMTIgMTJzLTUuMzc3IDEyLTEyIDEyLTEyLTUuMzc3LTEyLTEyIDUuMzc3LTEyIDEyLTEyem0wIDFjNi4wNzEgMCAxMSA0LjkyOSAxMSAxMXMtNC45MjkgMTEtMTEgMTEtMTEtNC45MjktMTEtMTEgNC45MjktMTEgMTEtMTF6bTUuMjQ3IDhsLTUuMjQ3IDYuNDQtNS4yNjMtNi40NC0uNzM3LjY3OCA2IDcuMzIyIDYtNy4zMzUtLjc1My0uNjY1eiIvPjwvc3ZnPg=="); 
+    }
+    .open .floating-modal__title{
+        background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0xMiAwYzYuNjIzIDAgMTIgNS4zNzcgMTIgMTJzLTUuMzc3IDEyLTEyIDEyLTEyLTUuMzc3LTEyLTEyIDUuMzc3LTEyIDEyLTEyem0wIDFjNi4wNzEgMCAxMSA0LjkyOSAxMSAxMXMtNC45MjkgMTEtMTEgMTEtMTEtNC45MjktMTEtMTEgNC45MjktMTEgMTEtMTF6bTUuMjQ3IDE1bC01LjI0Ny02LjQ0LTUuMjYzIDYuNDQtLjczNy0uNjc4IDYtNy4zMjIgNiA3LjMzNS0uNzUzLjY2NXoiLz48L3N2Zz4=');
+    }  
+    .block-impact--note-floatingmodal .block-impact__container.open {
+      height: 70%;
+    }
+} */
+@media(max-width: 1400px){
+    .blocks-lesson.has-modal {
+        padding-bottom: 110px;
+        padding-bottom: 200px;
+    }
+    .floating-modal__link{
+        /* display: none; */
+    }
+    .floating-modal__title{
+        text-align: left;
+    }
+   .floating-modal__title:after{
+        content: '+';        
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 1em;
+        color: #636363;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .open .floating-modal__title:after {
+        content: '-';
+    }
+    .floating-modal__prompt{
+        /* bottom: 0; */
+    }
+    .floating-modal__prompt>p * {
+        font-size: 16px!important;
+    }
+    .floating-modal__prompt>p>s{
+        font-size: 0!important;
+    }
+    .floating-modal__prompt p:first-child{
+        display: none;
+    }
+    .floating-modal__title{
+        position: relative;
+    }
+    .block-impact--note-floatingmodal .block-impact__container {
+        max-width: 100%;
+        width: 100%;
+        left: 0!important;
+        bottom: 0;
+        top: auto;
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+        border: none;
+        box-shadow: none;
+        /* max-height: 115px; */
+        max-height: 200px;
+    }
+    .block-impact--note-floatingmodal .block-impact__container.open {
+        height: 100%;
+        max-height: none;
+    }
+    .block-impact__container.open .floating-modal__title{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .block-impact__container.open .floating-modal__prompt{
+        top: 60px;
+    }
+    .floating-modal__prompt>p>s::before{
+        display: none;
+    }
+}
+@media(max-width:742px){
+    .blocks-lesson.has-modal {
+        /* padding-bottom: 130px; */
+        padding-bottom: 150px;
+    }
+    .block-impact--note-floatingmodal .block-impact__container {
+        /* max-height: 135px; */
+        max-height: 150px;
+    }
+}
+@media(max-width: 380px){
+    .floating-modal__title{
+        padding-right: 40px;
+    }
+}
+
+
+@media (min-width: 52.5em) {
+    .block-image__col:first-child {
+        margin-left: 8.3333333333%;
+        width: 83.3333333333%;
+    }
+    .block-image--text-aside.block-image--small .block-image__col:first-child {
+        margin-left: 8.3333333333%;
+    }
+    .block-image--text-aside.block-image--reverse.block-image--small .block-image__col:last-child {
+        margin-left: 0;
+        margin-right: 8.3333333333%;
+        width: 50%;
+    }    
+}
+
+
+
+[data-block-id="cl4xht73m00o53b6x03p0qxq1"] .block-list__checkbox{
+    background-color: #595478 !important;
+}
+[data-block-id="cl4xht73m00o53b6x03p0qxq1"] .block-list__checkbox .block-list__checkbox__icon {
+    color: #fff;
+}
+[data-block-id="cl4xht73m00o53b6x03p0qxq1"] .block-list__checkbox .block-list__checkbox__icon {
+    opacity: 1!important;
+}
+
+
+.cover__details-content:after{
+    content: '©2023 Neurocrine Biosciences, Inc. All Rights Reserved. CP-VBZ-US-2220V2 4/2023';
+    display: block;
+    text-align: center;
+    padding-top: 90px;
+    font-family: lato,sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.6rem;
+}
+
+
+
+/* * * * * * * * * * * * * * * 
+ * Adding logo to Header of Lesson 
+ * * * * * * * * * * * * * * */
+.sidebar-sublist-1 .page__header h1.fr-view,
+.sidebar-sublist-2 .page__header h1.fr-view,
+.sidebar-sublist-3 .page__header h1.fr-view,
+.sidebar-sublist-4 .page__header h1.fr-view {
+    max-width: 90%;
+}
+.sidebar-sublist-1 .page__header,
+.sidebar-sublist-2 .page__header,
+.sidebar-sublist-3 .page__header,
+.sidebar-sublist-4 .page__header {
+    background-image: url(ingrezza-valbenazine-logo-n.svg);
+    background-position: center right 100px;
+    background-repeat: no-repeat;
+    background-size: 400px 110px;
+}
+@media(max-width:1600px){
+    .sidebar-sublist-1 .page__header,
+    .sidebar-sublist-2 .page__header,
+    .sidebar-sublist-3 .page__header,
+    .sidebar-sublist-4 .page__header {
+        background-position: center right 30px;
+        background-size: 300px 100px;
+    } 
+}
+@media(max-width:1200px){
+    .sidebar-sublist-1 .page__header,
+    .sidebar-sublist-2 .page__header,
+    .sidebar-sublist-3 .page__header,
+    .sidebar-sublist-4 .page__header {
+        background-position: center right 10px;
+        background-size: 200px 100px;
+    }
+    .sidebar-sublist-1 .page__header h1.fr-view,
+    .sidebar-sublist-2 .page__header h1.fr-view,
+    .sidebar-sublist-3 .page__header h1.fr-view,
+    .sidebar-sublist-4 .page__header h1.fr-view {
+        max-width: 80%;
+    } 
+}
+@media(max-width:700px){
+    .sidebar-sublist-1 .page__header,
+    .sidebar-sublist-2 .page__header,
+    .sidebar-sublist-3 .page__header,
+    .sidebar-sublist-4 .page__header {
+        background-size: 200px 100px;
+    }
+    .sidebar-sublist-1 .page__header h1.fr-view,
+    .sidebar-sublist-2 .page__header h1.fr-view,
+    .sidebar-sublist-3 .page__header h1.fr-view,
+    .sidebar-sublist-4 .page__header h1.fr-view {
+        max-width: 50%;
+    } 
+}
+@media(max-width:480px){
+    .sidebar-sublist-1 .page__header,
+    .sidebar-sublist-2 .page__header,
+    .sidebar-sublist-3 .page__header,
+    .sidebar-sublist-4 .page__header {
+        background-size: 130px 100px;
+    }
+    .sidebar-sublist-1 .page__header h1.fr-view,
+    .sidebar-sublist-2 .page__header h1.fr-view,
+    .sidebar-sublist-3 .page__header h1.fr-view,
+    .sidebar-sublist-4 .page__header h1.fr-view {
+        max-width: 60%;
+    } 
+}
+
+[data-block-id="cl4xhwad600oq3b6xfrco3a7t"] .fr-view p:last-child {
+    line-height: 0.8;
+}
