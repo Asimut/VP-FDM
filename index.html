@@ -64,26 +64,36 @@
 
           function checkRegistration() {
             navigator.serviceWorker.getRegistrations().then(registrations => {
-              console.log(registrations[0]);
-              if(registrations[0].installing){
-                console.log('Still Installing!')
 
-                setTimeout(checkRegistration, 500);
-              }
-              if(registrations[0].active){
-                console.log('ServiceWorker installed!');
+              registrations.forEach(function(element, index) {
+                  console.log(element);
+                  var registerItem = element;
 
-                var Loader = document.getElementById("loader");
-                    Loader.style.display = 'none';
+                  if(registerItem.installing){
+                    console.log('Still Installing!')
 
-                if (navigator.standalone || window.matchMedia('(display-mode: standalone)').matches) {
-                  console.log('Приложение уже установлено')
-                } else {
-                  console.log('Приложение еще не установлено');
-                  alert('App is ready to download!');
-                }  
+                    setTimeout(checkRegistration, 500);
+                  }
+                  if(registerItem.active){
+                    console.log(registerItem.active.scriptURL);
 
-              }
+                    if(registerItem.active.scriptURL == "https://asimut.github.io/VP-FDM/pwabuilder-sw.js"){
+                      console.log('ServiceWorker VP-OC installed!');
+
+                      var Loader = document.getElementById("loader");
+                          Loader.style.display = 'none';
+
+                      if (navigator.standalone || window.matchMedia('(display-mode: standalone)').matches) {
+                        console.log('The app is already installed');
+                      } else {
+                        console.log('The app is not installed yet');
+                        alert('App is ready to download!');
+                      }  
+                    }
+
+                  }
+              });
+
             });
           }
 
